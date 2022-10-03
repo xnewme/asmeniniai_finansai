@@ -1,11 +1,9 @@
-import React from 'react'
+import React, { useState } from 'react';
 import { Navbar, Button, Link, Text, Card, Radio } from "@nextui-org/react";
 
-
-export const Header = () => {
+export const Header = (props) => {
   const [variant, setVariant] = React.useState("static");
-
-  const variants = ["static", "floating", "sticky"];
+loginas = true;
   return (
     <div>
       <Navbar isBordered variant={variant}>
@@ -19,7 +17,7 @@ export const Header = () => {
           <Navbar.Link isActive href="#">Musu jau</Navbar.Link>
         </Navbar.Content>
         <Navbar.Content>
-          <Navbar.Link color="inherit" href="#">
+          <Navbar.Link color="inherit" href="#" modalis= {props.loginas}>
             Prisijungti
           </Navbar.Link>
           <Navbar.Item>

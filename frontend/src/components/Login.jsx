@@ -1,9 +1,8 @@
 import { Modal, useModal, Button, Text } from "@nextui-org/react";
 import React, { useState } from 'react';
-import { Modal, Button, Text, Input, Row, Checkbox } from "@nextui-org/react";
 import { Mail } from "./Mail";
 import { Password } from "./Password";
-const Login = () => {
+const Login = (props) => { 
 
  const [visible, setVisible] = React.useState(false);
 const handler = () => setVisible(true);
@@ -12,9 +11,6 @@ const closeHandler = () => {
         console.log("closed");
     return (
       <div>
-        <Button auto ghost color="success" onClick={handler}>
-          Open modal
-        </Button>
         <Modal
           closeButton
           animated={false}
@@ -65,5 +61,5 @@ Prisijungimas
       </div>
   )
 }
-
-export default Login
+}
+export default Login;
